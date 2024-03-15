@@ -6,6 +6,8 @@ import com.juan.boot.spring.boot.services.PreguntaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PreguntaServiceImpl implements PreguntaService {
     @Autowired
@@ -18,6 +20,11 @@ public class PreguntaServiceImpl implements PreguntaService {
 
     @Override
     public Pregunta findById(Long id) {
-        return ;
+        Optional<Pregunta> o = repository.findById(id);
+        if(o.isPresent()){
+            Pregunta pregunta = o.get();
+            return pregunta;
+        }
+        return null;
     }
 }

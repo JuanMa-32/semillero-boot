@@ -1,13 +1,11 @@
 package com.juan.boot.spring.boot.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
+@Entity
 public class Pregunta {
 
     @Id

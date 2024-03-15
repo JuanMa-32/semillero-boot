@@ -1,14 +1,12 @@
 package com.juan.boot.spring.boot.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@Entity
 public class Respuesta {
 
     @Id
